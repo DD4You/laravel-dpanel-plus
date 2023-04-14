@@ -1,0 +1,17 @@
+<?php
+
+return [
+    'prefix' => 'dpanel',
+    'admin' => [
+        'first_name' => 'Dpanel',
+        'last_name' => 'Admin',
+        'email' => 'dpanel@localhost.com',
+        'password' => 'dpanel',
+    ],
+    'super_admin' => [
+        'first_name' => 'Super',
+        'last_name' => 'Admin',
+        'email' => 'su@localhost.com',
+        'password' => 'suadmin',
+    ]
+];
