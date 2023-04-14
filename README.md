@@ -17,7 +17,7 @@
 
 ## This is modern Admin Panel developed By DD4You.in with tailwind css. It's help to create admin panel with prebuild login system with multi role and permission
 
-![dpanel](https://user-images.githubusercontent.com/41217230/209454903-0a8692ff-f9c0-481f-975a-a2cc3f86920a.png)
+![dpanel](https://user-images.githubusercontent.com/41217230/232043577-f93a0300-ced3-49b9-b97a-51176542816d.png)
 
 Install Package via composer
 
