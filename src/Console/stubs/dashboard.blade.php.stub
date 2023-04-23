@@ -14,33 +14,33 @@
 @section('body_content')
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 
-        <x-dpanel::card.style_a class="bg-violet-500" count='5'>
+        <x-dpanel::card.style1 class="bg-violet-500" count='5'>
             <x-slot:icon>
                 <i class='bx bx-user text-3xl text-white'></i>
             </x-slot:icon>
             Total User
-        </x-dpanel::card.style_a>
+        </x-dpanel::card.style1>
 
-        <x-dpanel::card.style_a class="bg-yellow-500" count='2'>
+        <x-dpanel::card.style1 class="bg-yellow-500" count='2'>
             <x-slot:icon>
                 <i class='bx bx-user text-3xl text-white'></i>
             </x-slot:icon>
             Total Admin
-        </x-dpanel::card.style_a>
+        </x-dpanel::card.style1>
 
-        <x-dpanel::card.style_a class="bg-green-500" count='1'>
+        <x-dpanel::card.style1 class="bg-green-500" count='1'>
             <x-slot:icon>
                 <i class='bx bx-user text-3xl text-white'></i>
             </x-slot:icon>
             Total Super Admin
-        </x-dpanel::card.style_a>
+        </x-dpanel::card.style1>
 
 
 
 
 
 
-        <x-dpanel::card.style_a class="bg-red-500">
+        <x-dpanel::card.style1 class="bg-red-500">
             <x-slot:icon>
                 <i class='bx bx-check-shield text-3xl text-white'></i>
             </x-slot:icon>
@@ -50,8 +50,8 @@
                 Not access Heading 4
             @endif
 
-        </x-dpanel::card.style_a>
-        <x-dpanel::card.style_a class="bg-orange-500">
+        </x-dpanel::card.style1>
+        <x-dpanel::card.style1 class="bg-orange-500">
             <x-slot:icon>
                 <i class='bx bx-diamond text-3xl text-white'></i>
             </x-slot:icon>
@@ -60,7 +60,7 @@
             @else
                 I am not a super-admin...
             @endrole
-        </x-dpanel::card.style_a>
+        </x-dpanel::card.style1>
 
     </div>
 

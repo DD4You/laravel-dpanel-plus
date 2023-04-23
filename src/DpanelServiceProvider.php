@@ -50,6 +50,10 @@ class DpanelServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/database/migrations/update_to_users_table.php.stub' => database_path('migrations/2014_10_12_200000_update_to_users_table.php'),
             ], 'migrations');
+
+            $this->publishes([
+                __DIR__ . '/database/seeders/PermissionSeeder.php.stub' => database_path('seeders/PermissionSeeder.php'),
+            ], 'seeders');
         }
     }
     public function register()

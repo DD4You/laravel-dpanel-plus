@@ -58,6 +58,20 @@ Gate::before(function ($user, $ability) {
 
 ```
 
+## Default Dpanel Login Details
+
+    URL: your_domain/dpanel
+
+### Super Admin
+
+    Email: su@localhost.com
+    Password: suadmin
+
+### Admin
+
+    Email: dpanel@localhost.com
+    Password: dpanel
+
 # Global Settings
 
 Store general settings like website name, logo url, contacts in the database easily.

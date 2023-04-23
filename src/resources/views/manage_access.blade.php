@@ -9,8 +9,13 @@
 @push('scripts')
     <script src="{{ asset('dd4you/dpanel/js/animated-tags-input/tags-input.js') }}"></script>
     <script>
+        const removeParamFromURL = (url, param) => {
+            const [path, searchParams] = url.split('?');
+            return path;
+        }
+
         const editRole = (id, roleName, permissions) => {
-            document.getElementById('edit_role_form').action = `${window.location.origin}/dpanel/manage-access/${id}`;
+            document.getElementById('edit_role_form').action = `${removeParamFromURL(window.location.href)}/${id}`;
             document.getElementById('role_name').value = roleName;
             let arr = [];
             JSON.parse(permissions).forEach(permission => {
@@ -21,7 +26,7 @@
         }
         const editUser = (id, first_name, last_name, email, roles) => {
             console.log(last_name);
-            document.getElementById('edit_user_form').action = `${window.location.origin}/dpanel/manage-access/${id}`;
+            document.getElementById('edit_user_form').action = `${removeParamFromURL(window.location.href)}/${id}`;
             document.getElementById('first_name').value = first_name;
             document.getElementById('last_name').value = last_name;
             document.getElementById('email').value = email;

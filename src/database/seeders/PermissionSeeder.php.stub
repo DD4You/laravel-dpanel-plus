@@ -1,0 +1,30 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
+use Spatie\Permission\Models\Permission;
+
+class PermissionSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        # Permissions
+        Permission::upsert(
+            [
+                ['guard_name' => 'web', 'name' => 'dpanel-access'],
+                ['guard_name' => 'web', 'name' => 'global-settings'],
+                ['guard_name' => 'web', 'name' => 'manage-access'],
+            ],
+            ['guard_name']
+        );
+
+        Artisan::call('optimize:clear');
+    }
+}
