@@ -82,8 +82,7 @@ class ManageAccessController extends Controller
                 'email' => 'required|email|unique:users,email'
             ]);
             $user = User::create([
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
+                'name' => $request->first_name . ' ' . $request->last_name,
                 'email' => $request->email,
                 'email_verified_at' => now(),
                 'password' => bcrypt($request->password)
@@ -117,15 +116,9 @@ class ManageAccessController extends Controller
             ]);
 
             $user = User::find($id);
-
-            $user->first_name = $request->first_name;
-
-            $user->last_name = $request->last_name;
-
+            $user->name = $request->first_name . ' ' . $request->last_name;
             $user->email = $request->email;
-
             if ($request->password) $user->password = bcrypt($request->password);
-
             $user->save();
 
             if ($request->roles) $user->syncRoles($request->roles);
