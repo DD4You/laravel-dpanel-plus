@@ -35,16 +35,14 @@ class UserSeeder extends Seeder
         $role_admin->givePermissionTo(['dpanel-access', 'global-settings']);
 
         $user1 =  User::create([
-            'first_name' => config('dpanel.admin.first_name'),
-            'last_name' => config('dpanel.admin.last_name'),
+            'name' => config('dpanel.admin.first_name') . ' ' . config('dpanel.admin.last_name'),
             'email' => config('dpanel.admin.email'),
             'email_verified_at' => now(),
             'password' => bcrypt(config('dpanel.admin.password'))
         ]);
 
         $user2 = User::create([
-            'first_name' => config('dpanel.super_admin.first_name'),
-            'last_name' => config('dpanel.super_admin.last_name'),
+            'name' => config('dpanel.super_admin.first_name') . ' ' . config('dpanel.super_admin.last_name'),
             'email' => config('dpanel.super_admin.email'),
             'email_verified_at' => now(),
             'password' => bcrypt(config('dpanel.super_admin.password'))

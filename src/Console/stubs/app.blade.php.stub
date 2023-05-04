@@ -23,7 +23,7 @@
         <div class="w-full flex justify-between items-center">
             <span class="font-medium">Dashboard</span>
             <div class="flex items-center gap-2">
-                <span class="font-medium">{{ Str::limit(auth()->user()->full_name, 10, ' ...') }}</span>
+                <span class="font-medium">{{ Str::limit(auth()->user()->name, 10, ' ...') }}</span>
             </div>
         </div>
     </header>
