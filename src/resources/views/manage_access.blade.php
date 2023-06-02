@@ -173,9 +173,9 @@
                     <td class="pl-3 py-2">
                         {{ $loop->iteration }}
                     </td>
-                    <td class="pl-3 py-2 capitalize whitespace-nowrap">{{ $item->full_name }}</td>
+                    <td class="pl-3 py-2 capitalize whitespace-nowrap">{{ $item->name }}</td>
 
-                    <td class="pl-3 py-2 capitalize whitespace-nowrap">{{ $item->email }}</td>
+                    <td class="pl-3 py-2 whitespace-nowrap">{{ $item->email }}</td>
                     <td class="pl-3 py-2">
                         <div class="flex flex-wrap gap-1">
                             @forelse ($item->roles as $subitem)

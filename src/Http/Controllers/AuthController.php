@@ -23,7 +23,7 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials, true)) {
 
             if (auth()->user()->can('dpanel-access')) {
 
