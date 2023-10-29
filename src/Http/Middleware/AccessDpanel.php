@@ -9,7 +9,7 @@ class AccessDpanel
 {
     public function handle($request, Closure $next)
     {
-        if (!Gate::allows('role')) {
+        if (!Gate::allows('dpanel-access')) {
             auth()->logout();
             session()->invalidate();
             session()->regenerateToken();

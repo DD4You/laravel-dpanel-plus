@@ -151,40 +151,20 @@ settings()->getAll();
 You can use the settings on blade as
 
 ```code
-{{ settings('site_name')['value'] }}
+{{ settings('site_name') }}
 ```
 
 Or, if you have html stored on settings
 
 ```code
-{!! settings('footer_text')['value'] !!}
-{!! settings('footer_text')['value'] Copyright Date('Y') !!}
+{!! settings('footer_text') !!}
+{!! settings('footer_text') Copyright Date('Y') !!}
 ```
 
 Finally, If you have changed something directly on database, Don't forget to clear the cache.
 
 ```code
 php artisan cache:clear
-```
-
-# Laravel Dynamic Search :
-
-- use `Searchable` trait in your model
-- Define `$searchable` property in your model to select which columns to search in
-
-Example :
-
-```
-use DD4You\Dpanel\Trait\Searchable;
-
-class User extends Model {
-
-  use Searchable ;
-  protected $searchable = ['name', 'posts.title'];
-
-  public function posts(){
-    return $this->hasMany(Post::class);
-  }
 ```
 
 ## License
@@ -197,7 +177,7 @@ If you have any feedback, please reach out at vinay@dd4you.in or submit a pull r
 
 ## Authors
 
-- [@dd4you](https://www.github.com/DD4You)
+-   [@dd4you](https://www.github.com/DD4You)
 
 ## Badges
 
